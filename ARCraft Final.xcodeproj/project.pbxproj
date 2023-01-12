@@ -21,6 +21,8 @@
 		2C6D68D0296FA83D00EB37FC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68CF296FA83D00EB37FC /* Model.swift */; };
 		2C6D68D2296FAE1A00EB37FC /* PlacementButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68D1296FAE1A00EB37FC /* PlacementButtonView.swift */; };
 		2C6D68D4296FAE6B00EB37FC /* ModelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68D3296FAE6B00EB37FC /* ModelPickerView.swift */; };
+		2C6D68D8296FB67700EB37FC /* LazyCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 2C6D68D7296FB67700EB37FC /* LazyCollectionView */; };
+		2C6D68DA296FB6A500EB37FC /* MainPreviewObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68D9296FB6A500EB37FC /* MainPreviewObjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,7 @@
 		2C6D68CF296FA83D00EB37FC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		2C6D68D1296FAE1A00EB37FC /* PlacementButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacementButtonView.swift; sourceTree = "<group>"; };
 		2C6D68D3296FAE6B00EB37FC /* ModelPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelPickerView.swift; sourceTree = "<group>"; };
+		2C6D68D9296FB6A500EB37FC /* MainPreviewObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPreviewObjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6D68CA296FA6B600EB37FC /* FocusEntity in Frameworks */,
+				2C6D68D8296FB67700EB37FC /* LazyCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +76,10 @@
 		2C6D68AC296FA36800EB37FC /* ARCraft Final */ = {
 			isa = PBXGroup;
 			children = (
-				2C6D68BD296FA5D000EB37FC /* Models */,
 				2C6D68AD296FA36800EB37FC /* AppDelegate.swift */,
-				2C6D68CB296FA6DE00EB37FC /* FocusARView.swift */,
-				2C6D68D1296FAE1A00EB37FC /* PlacementButtonView.swift */,
 				2C6D68AF296FA36800EB37FC /* ContentView.swift */,
-				2C6D68D3296FAE6B00EB37FC /* ModelPickerView.swift */,
+				2C6D68D5296FB62200EB37FC /* Views */,
+				2C6D68BD296FA5D000EB37FC /* Models */,
 				2C6D68B3296FA36900EB37FC /* Assets.xcassets */,
 				2C6D68B5296FA36900EB37FC /* Preview Content */,
 			);
@@ -104,6 +106,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2C6D68D5296FB62200EB37FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C6D68CB296FA6DE00EB37FC /* FocusARView.swift */,
+				2C6D68D1296FAE1A00EB37FC /* PlacementButtonView.swift */,
+				2C6D68D3296FAE6B00EB37FC /* ModelPickerView.swift */,
+				2C6D68D9296FB6A500EB37FC /* MainPreviewObjectView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +135,7 @@
 			name = "ARCraft Final";
 			packageProductDependencies = (
 				2C6D68C9296FA6B600EB37FC /* FocusEntity */,
+				2C6D68D7296FB67700EB37FC /* LazyCollectionView */,
 			);
 			productName = "ARCraft Final";
 			productReference = 2C6D68AA296FA36800EB37FC /* ARCraft Final.app */;
@@ -153,6 +167,7 @@
 			mainGroup = 2C6D68A1296FA36800EB37FC;
 			packageReferences = (
 				2C6D68C8296FA6B600EB37FC /* XCRemoteSwiftPackageReference "FocusEntity" */,
+				2C6D68D6296FB67700EB37FC /* XCRemoteSwiftPackageReference "swiftui-lazycollectionview" */,
 			);
 			productRefGroup = 2C6D68AB296FA36800EB37FC /* Products */;
 			projectDirPath = "";
@@ -190,6 +205,7 @@
 				2C6D68D4296FAE6B00EB37FC /* ModelPickerView.swift in Sources */,
 				2C6D68AE296FA36800EB37FC /* AppDelegate.swift in Sources */,
 				2C6D68D0296FA83D00EB37FC /* Model.swift in Sources */,
+				2C6D68DA296FB6A500EB37FC /* MainPreviewObjectView.swift in Sources */,
 				2C6D68D2296FAE1A00EB37FC /* PlacementButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +423,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		2C6D68D6296FB67700EB37FC /* XCRemoteSwiftPackageReference "swiftui-lazycollectionview" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/unsplash/swiftui-lazycollectionview.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -414,6 +438,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2C6D68C8296FA6B600EB37FC /* XCRemoteSwiftPackageReference "FocusEntity" */;
 			productName = FocusEntity;
+		};
+		2C6D68D7296FB67700EB37FC /* LazyCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C6D68D6296FB67700EB37FC /* XCRemoteSwiftPackageReference "swiftui-lazycollectionview" */;
+			productName = LazyCollectionView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
