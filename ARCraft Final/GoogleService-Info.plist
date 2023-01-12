@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>478689926653-bdogsuvvou494tg0nsu6cqjj7tu8niol.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.478689926653-bdogsuvvou494tg0nsu6cqjj7tu8niol</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDmtEsmiMV_j57VxGm-qgLgFufax5S1F-I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>478689926653</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Eddie.ModelPickerApp</string>
+	<key>PROJECT_ID</key>
+	<string>fb-test-c3eb6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fb-test-c3eb6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:478689926653:ios:976a546bea9df1627c0d94</string>
+	<key>DATABASE_URL</key>
+	<string>https://fb-test-c3eb6-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>

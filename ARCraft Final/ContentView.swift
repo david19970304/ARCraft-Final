@@ -24,6 +24,9 @@ struct ContentView : View {
             Text("AR Mode").tag(1)
             
         }.pickerStyle(SegmentedPickerStyle())
+        .onAppear{
+                loadModelFilesFromDownloadedContent()
+            }
   
 
         switch(selectedTab) {
@@ -38,7 +41,34 @@ struct ContentView : View {
         default: MainPreviewObjectView(models: $models)
         }
     }
+    
+    func loadModelFilesFromDownloadedContent() {
+        let storageManager = StorageManager()
+        storageManager.getFilesFromFireBase()
+        
+        storageManager.callBack = { name in
+            let root = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            let downloadedContentFolder = root.appendingPathComponent("DownloadedContent")
+//            let files = try? FileManager.default.contentsOfDirectory(atPath: downloadedContentFolder.path)
+            let imageUrl = downloadedContentFolder.appendingPathComponent("\(name)/image.jpg")
+            let objectUrl = downloadedContentFolder.appendingPathComponent("\(name)/object.usdz")
+            
+            let imageIsExisted = FileManager.default.fileExists(atPath: imageUrl.path)
+            let objectIsExisted = FileManager.default.fileExists(atPath: objectUrl.path)
+            
+            if imageIsExisted == true && objectIsExisted == true {
+                DispatchQueue.main.async {
+                    let isAlreadyExisted = models.contains{$0.name == name}
+                    
+                    if (!isAlreadyExisted) {
+                        models.append(Model(modelName: name, isInDownloadedContent: true))
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 func getModelFilenames() -> [Model] {
         

@@ -57,7 +57,11 @@ struct ARQuickLookView: UIViewControllerRepresentable {
             previewItemAt index: Int
         ) -> QLPreviewItem {
             guard let fileURL = Bundle.main.url(forResource: parent.name, withExtension: "usdz") else {
-                let item = ARQuickLookPreviewItem(fileAt: fileURL)
+                // If It is not in Assets, then go to DownloadedContent
+                let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                let localObjectURL = documentsURL.appendingPathComponent("DownloadedContent/\(parent.name)/object.usdz")
+                let item = ARQuickLookPreviewItem(fileAt: localObjectURL)
+                item.allowsContentScaling = parent.allowScaling
                 return item
             }
             
