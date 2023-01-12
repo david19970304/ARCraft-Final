@@ -40,6 +40,25 @@ struct ContentView : View {
             )
         default: MainPreviewObjectView(models: $models)
         }
+        
+        if (selectedTab == 0) {
+            HStack (alignment: .bottom) {
+                Spacer()
+                Button {
+                    removeAllDownloadedContent()
+                } label: {
+                    Label("Remove All", systemImage: "icloud.slash")
+                }.buttonStyle(RoundedRectangleButtonStyle())
+                Spacer()
+                
+                Button {
+                    loadModelFilesFromDownloadedContent()
+                } label: {
+                    Label("Firebase", systemImage: "icloud.and.arrow.down")
+                }.buttonStyle(RoundedRectangleButtonStyle())
+                Spacer()
+            }
+        }
     }
     
     func loadModelFilesFromDownloadedContent() {
@@ -66,6 +85,22 @@ struct ContentView : View {
                 }
             }
         }
+    }
+    
+    func removeAllDownloadedContent() {
+        let root = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let downloadedContentFolder = root.appendingPathComponent("DownloadedContent")
+        
+        do {
+            try FileManager().removeItem(at: downloadedContentFolder)
+            DispatchQueue.main.async {
+                models = models.filter{$0.isDownloadedContent == false}
+            }
+        } catch {
+            print(error)
+        }
+        
+
     }
 }
 
