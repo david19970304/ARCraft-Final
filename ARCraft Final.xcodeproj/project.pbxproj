@@ -23,6 +23,7 @@
 		2C6D68D4296FAE6B00EB37FC /* ModelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68D3296FAE6B00EB37FC /* ModelPickerView.swift */; };
 		2C6D68D8296FB67700EB37FC /* LazyCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 2C6D68D7296FB67700EB37FC /* LazyCollectionView */; };
 		2C6D68DA296FB6A500EB37FC /* MainPreviewObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68D9296FB6A500EB37FC /* MainPreviewObjectView.swift */; };
+		2C6D68DC296FB81000EB37FC /* ARQuickLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68DB296FB81000EB37FC /* ARQuickLook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2C6D68D1296FAE1A00EB37FC /* PlacementButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacementButtonView.swift; sourceTree = "<group>"; };
 		2C6D68D3296FAE6B00EB37FC /* ModelPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelPickerView.swift; sourceTree = "<group>"; };
 		2C6D68D9296FB6A500EB37FC /* MainPreviewObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPreviewObjectView.swift; sourceTree = "<group>"; };
+		2C6D68DB296FB81000EB37FC /* ARQuickLook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARQuickLook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				2C6D68AC296FA36800EB37FC /* ARCraft Final */,
 				2C6D68CF296FA83D00EB37FC /* Model.swift */,
+				2C6D68DB296FB81000EB37FC /* ARQuickLook.swift */,
 				2C6D68AB296FA36800EB37FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6D68B0296FA36800EB37FC /* ContentView.swift in Sources */,
+				2C6D68DC296FB81000EB37FC /* ARQuickLook.swift in Sources */,
 				2C6D68CC296FA6DE00EB37FC /* FocusARView.swift in Sources */,
 				2C6D68D4296FAE6B00EB37FC /* ModelPickerView.swift in Sources */,
 				2C6D68AE296FA36800EB37FC /* AppDelegate.swift in Sources */,

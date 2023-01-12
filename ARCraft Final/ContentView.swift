@@ -17,6 +17,8 @@ struct ContentView : View {
     
     
     var body: some View {
+        
+        MainPreviewObjectView(models: $models)
         ARViewContainer(arView: arView, modelConfirmedForPlacement: $modelConfirmedForPlacement, models: $models)
         
         if isPlacementEnabled {
