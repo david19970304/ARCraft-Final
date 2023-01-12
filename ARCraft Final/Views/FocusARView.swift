@@ -40,7 +40,23 @@ class FocusARView: ARView, ObservableObject {
 }
 
 extension FocusARView: FocusEntityDelegate {
-
+    
+    func enableObjectRemoval() {
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(recognizer:)))
+        self.addGestureRecognizer(longPressGestureRecognizer)
+        print("DEBUG: enableObjectRemoval loaded")
+    }
+    
+    @objc func handleLongPress(recognizer: UILongPressGestureRecognizer) {
+        let location = recognizer.location(in: self)
+        
+        if let entity = self.entity(at: location) {
+            if let anchorEntity = entity.anchor {
+                anchorEntity.removeFromParent()
+            }
+         
+        }
+    }
     
     func toTrackingState() {
         print("tracking")

@@ -62,7 +62,7 @@ struct ARViewContainer: UIViewRepresentable {
     @ObservedObject var arView: FocusARView
 
     func makeUIView(context: Context) -> ARView {
-        
+        arView.enableObjectRemoval()
         return arView
     }
     
@@ -88,6 +88,7 @@ struct ARViewContainer: UIViewRepresentable {
 
             DispatchQueue.main.async {
                 modelConfirmedForPlacement = nil
+                
                 
             }
             
