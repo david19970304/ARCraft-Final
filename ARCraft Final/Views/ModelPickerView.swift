@@ -10,6 +10,8 @@ import SwiftUI
 struct ModelPickerView: View {
     @Binding var isPlacementEnabled: Bool
     @Binding var selectedModel: Model?
+    @State private var orientation = UIDevice.current.orientation
+    var idiom : UIUserInterfaceIdiom = UIDevice.current.userInterfaceIdiom
     
     var models: [Model]
     
@@ -29,7 +31,7 @@ struct ModelPickerView: View {
                     }) {
                         Image(uiImage: self.models[index].image)
                             .resizable()
-                            .frame(height: 80)
+                            .frame(height: orientation.isLandscape && idiom == .phone ? 40: 80)
                             .aspectRatio(1/1, contentMode: .fit)
                             .background(Color.white)
                             .cornerRadius(12)
@@ -37,8 +39,10 @@ struct ModelPickerView: View {
                     .buttonStyle(PlainButtonStyle())
                 }
             }
+        }.onRotate { newOrientation in
+            orientation = newOrientation
         }
-        .padding(20)
+        .padding(orientation.isLandscape && idiom == .phone ? 10: 20)
         .background(Color.black.opacity(0.5))
     }
     
