@@ -42,7 +42,14 @@ struct MainPreviewObjectView: View {
                             .background(Color.white)
                             .cornerRadius(12)
                     }
-           
+                    .overlay(
+                        Circle()
+                            .strokeBorder(.black, lineWidth: 0)
+                            .frame(width: 35, height: 35)
+                            .overlay(models[index].isDownloadedContent ? Image(systemName: "checkmark.icloud") : Image(systemName: "")
+                                
+                            )
+                        , alignment: .topTrailing)
                     .buttonStyle(PlainButtonStyle())
                     .sheet(isPresented: $showingPreview) {
                         // Sheet content: the quick look view with a header bar containing
