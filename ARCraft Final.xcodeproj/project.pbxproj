@@ -11,6 +11,16 @@
 		2C6D68B0296FA36800EB37FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68AF296FA36800EB37FC /* ContentView.swift */; };
 		2C6D68B4296FA36900EB37FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D68B3296FA36900EB37FC /* Assets.xcassets */; };
 		2C6D68B7296FA36900EB37FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D68B6296FA36900EB37FC /* Preview Assets.xcassets */; };
+		2C6D68C3296FA5D000EB37FC /* teapot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D68BE296FA5D000EB37FC /* teapot.usdz */; };
+		2C6D68C4296FA5D000EB37FC /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D68BF296FA5D000EB37FC /* toy_car.usdz */; };
+		2C6D68C5296FA5D000EB37FC /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D68C0296FA5D000EB37FC /* toy_biplane.usdz */; };
+		2C6D68C6296FA5D000EB37FC /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D68C1296FA5D000EB37FC /* tv_retro.usdz */; };
+		2C6D68C7296FA5D000EB37FC /* cup_saucer_set.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D68C2296FA5D000EB37FC /* cup_saucer_set.usdz */; };
+		2C6D68CA296FA6B600EB37FC /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 2C6D68C9296FA6B600EB37FC /* FocusEntity */; };
+		2C6D68CC296FA6DE00EB37FC /* FocusARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68CB296FA6DE00EB37FC /* FocusARView.swift */; };
+		2C6D68D0296FA83D00EB37FC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68CF296FA83D00EB37FC /* Model.swift */; };
+		2C6D68D2296FAE1A00EB37FC /* PlacementButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68D1296FAE1A00EB37FC /* PlacementButtonView.swift */; };
+		2C6D68D4296FAE6B00EB37FC /* ModelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D68D3296FAE6B00EB37FC /* ModelPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,15 @@
 		2C6D68AF296FA36800EB37FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2C6D68B3296FA36900EB37FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C6D68B6296FA36900EB37FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2C6D68BE296FA5D000EB37FC /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = teapot.usdz; sourceTree = "<group>"; };
+		2C6D68BF296FA5D000EB37FC /* toy_car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_car.usdz; sourceTree = "<group>"; };
+		2C6D68C0296FA5D000EB37FC /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
+		2C6D68C1296FA5D000EB37FC /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
+		2C6D68C2296FA5D000EB37FC /* cup_saucer_set.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cup_saucer_set.usdz; sourceTree = "<group>"; };
+		2C6D68CB296FA6DE00EB37FC /* FocusARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusARView.swift; sourceTree = "<group>"; };
+		2C6D68CF296FA83D00EB37FC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2C6D68D1296FAE1A00EB37FC /* PlacementButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacementButtonView.swift; sourceTree = "<group>"; };
+		2C6D68D3296FAE6B00EB37FC /* ModelPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6D68CA296FA6B600EB37FC /* FocusEntity in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				2C6D68AC296FA36800EB37FC /* ARCraft Final */,
+				2C6D68CF296FA83D00EB37FC /* Model.swift */,
 				2C6D68AB296FA36800EB37FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,8 +72,12 @@
 		2C6D68AC296FA36800EB37FC /* ARCraft Final */ = {
 			isa = PBXGroup;
 			children = (
+				2C6D68BD296FA5D000EB37FC /* Models */,
 				2C6D68AD296FA36800EB37FC /* AppDelegate.swift */,
+				2C6D68CB296FA6DE00EB37FC /* FocusARView.swift */,
+				2C6D68D1296FAE1A00EB37FC /* PlacementButtonView.swift */,
 				2C6D68AF296FA36800EB37FC /* ContentView.swift */,
+				2C6D68D3296FAE6B00EB37FC /* ModelPickerView.swift */,
 				2C6D68B3296FA36900EB37FC /* Assets.xcassets */,
 				2C6D68B5296FA36900EB37FC /* Preview Content */,
 			);
@@ -65,6 +90,18 @@
 				2C6D68B6296FA36900EB37FC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C6D68BD296FA5D000EB37FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C6D68BE296FA5D000EB37FC /* teapot.usdz */,
+				2C6D68BF296FA5D000EB37FC /* toy_car.usdz */,
+				2C6D68C0296FA5D000EB37FC /* toy_biplane.usdz */,
+				2C6D68C1296FA5D000EB37FC /* tv_retro.usdz */,
+				2C6D68C2296FA5D000EB37FC /* cup_saucer_set.usdz */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +120,9 @@
 			dependencies = (
 			);
 			name = "ARCraft Final";
+			packageProductDependencies = (
+				2C6D68C9296FA6B600EB37FC /* FocusEntity */,
+			);
 			productName = "ARCraft Final";
 			productReference = 2C6D68AA296FA36800EB37FC /* ARCraft Final.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 2C6D68A1296FA36800EB37FC;
+			packageReferences = (
+				2C6D68C8296FA6B600EB37FC /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 2C6D68AB296FA36800EB37FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +168,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6D68C6296FA5D000EB37FC /* tv_retro.usdz in Resources */,
+				2C6D68C7296FA5D000EB37FC /* cup_saucer_set.usdz in Resources */,
+				2C6D68C3296FA5D000EB37FC /* teapot.usdz in Resources */,
+				2C6D68C5296FA5D000EB37FC /* toy_biplane.usdz in Resources */,
+				2C6D68C4296FA5D000EB37FC /* toy_car.usdz in Resources */,
 				2C6D68B7296FA36900EB37FC /* Preview Assets.xcassets in Resources */,
 				2C6D68B4296FA36900EB37FC /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +186,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6D68B0296FA36800EB37FC /* ContentView.swift in Sources */,
+				2C6D68CC296FA6DE00EB37FC /* FocusARView.swift in Sources */,
+				2C6D68D4296FAE6B00EB37FC /* ModelPickerView.swift in Sources */,
 				2C6D68AE296FA36800EB37FC /* AppDelegate.swift in Sources */,
+				2C6D68D0296FA83D00EB37FC /* Model.swift in Sources */,
+				2C6D68D2296FAE1A00EB37FC /* PlacementButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +322,7 @@
 				DEVELOPMENT_TEAM = 79E2HK52R2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ARCrafts;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +354,7 @@
 				DEVELOPMENT_TEAM = 79E2HK52R2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ARCrafts;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -343,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C6D68C8296FA6B600EB37FC /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C6D68C9296FA6B600EB37FC /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C6D68C8296FA6B600EB37FC /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C6D68A2296FA36800EB37FC /* Project object */;
 }
