@@ -14,6 +14,8 @@ struct ContentView : View {
     @State var isPlacementEnabled: Bool = false
     @State private var selectedModel: Model?
     @State private var selectedTab: Int = 0
+    @State private var fadeInOut = false
+    @State private var hasObject = false
     
     
     var body: some View {
@@ -29,6 +31,8 @@ struct ContentView : View {
             case 1: MainARView(isPlacementEnabled: $isPlacementEnabled,
                                   selectedModel: $selectedModel,
                                   modelConfirmedForPlacement: $modelConfirmedForPlacement,
+                                  fadeInOut: $fadeInOut,
+                                  hasObject: $hasObject,
                                   models: $models
             )
         default: MainPreviewObjectView(models: $models)
@@ -59,6 +63,7 @@ func getModelFilenames() -> [Model] {
 
 struct ARViewContainer: UIViewRepresentable {
     @Binding var modelConfirmedForPlacement: Model?
+    @Binding var hasObject: Bool
     @ObservedObject var arView: FocusARView
 
     func makeUIView(context: Context) -> ARView {
@@ -84,6 +89,10 @@ struct ARViewContainer: UIViewRepresentable {
                 
                 uiView.scene.addAnchor(anchorEntity)
                 
+                DispatchQueue.main.async {
+                    hasObject = true
+                }
+                
                 
             } else {
                 print("DEBUG: Unable to load modelEntity for \(model.name)")
@@ -92,6 +101,11 @@ struct ARViewContainer: UIViewRepresentable {
             DispatchQueue.main.async {
                 modelConfirmedForPlacement = nil
                 
+                arView.callBack = {
+                    if uiView.scene.anchors.count <= 2 {
+                        hasObject = false
+                    }
+                }
                 
             }
             

@@ -53,6 +53,7 @@ extension FocusARView: FocusEntityDelegate {
         if let entity = self.entity(at: location) {
             if let anchorEntity = entity.anchor {
                 anchorEntity.removeFromParent()
+                callBack()
             }
          
         }
