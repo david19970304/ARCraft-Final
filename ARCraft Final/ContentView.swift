@@ -13,22 +13,25 @@ struct ContentView : View {
     @State var modelConfirmedForPlacement: Model?
     @State var isPlacementEnabled: Bool = false
     @State private var selectedModel: Model?
-    @ObservedObject var arView: FocusARView = FocusARView(frame: .zero)
+    @State private var selectedTab: Int = 0
     
     
     var body: some View {
-        
-        MainPreviewObjectView(models: $models)
-        ARViewContainer(arView: arView, modelConfirmedForPlacement: $modelConfirmedForPlacement, models: $models)
-        
-        if isPlacementEnabled {
-            PlacementButtonView(
-                isPlacementEnabled: $isPlacementEnabled,
-                selectedModel: $selectedModel,
-                modelConfirmedForPlacement: $modelConfirmedForPlacement
+        Picker("", selection: $selectedTab) {
+            Text("Preview Mode").tag(0)
+            Text("AR Mode").tag(1)
+            
+        }.pickerStyle(SegmentedPickerStyle())
+  
+
+        switch(selectedTab) {
+            case 0: MainPreviewObjectView(models: $models)
+            case 1: MainARView(isPlacementEnabled: $isPlacementEnabled,
+                                  selectedModel: $selectedModel,
+                                  modelConfirmedForPlacement: $modelConfirmedForPlacement,
+                                  models: $models
             )
-        } else {
-            ModelPickerView(isPlacementEnabled: $isPlacementEnabled, selectedModel: $selectedModel, models: models)
+        default: MainPreviewObjectView(models: $models)
         }
     }
 }
@@ -55,11 +58,11 @@ func getModelFilenames() -> [Model] {
 }
 
 struct ARViewContainer: UIViewRepresentable {
-    @ObservedObject var arView: FocusARView
     @Binding var modelConfirmedForPlacement: Model?
-    @Binding var models: [Model]
+    @ObservedObject var arView: FocusARView
 
     func makeUIView(context: Context) -> ARView {
+        
         return arView
     }
     
@@ -69,8 +72,8 @@ struct ARViewContainer: UIViewRepresentable {
             if let modelEntity = model.modelEntity {
                 print("DEBUG: adding model to scene - \(model.name)")
                 
-                let anchorEntity = AnchorEntity()
-//                let anchorEntity = AnchorEntity(plane: .any)
+//                let anchorEntity = AnchorEntity()
+                let anchorEntity = AnchorEntity(plane: .any)
                 
                 let newEntity = modelEntity.clone(recursive: true)
                 
@@ -89,7 +92,6 @@ struct ARViewContainer: UIViewRepresentable {
             }
             
         }
-        
     }
     
 }
