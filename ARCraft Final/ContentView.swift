@@ -77,6 +77,9 @@ struct ARViewContainer: UIViewRepresentable {
                 
                 let newEntity = modelEntity.clone(recursive: true)
                 
+                // AR Object can be moved, roatated, and scaled
+                uiView.installGestures([.translation, .rotation, .scale], for: newEntity)
+                
                 anchorEntity.addChild(newEntity)
                 
                 uiView.scene.addAnchor(anchorEntity)
